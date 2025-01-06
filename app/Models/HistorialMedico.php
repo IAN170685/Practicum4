@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class HistorialMedicoController extends Model
+class HistorialMedico extends Model
 {
     //
 }

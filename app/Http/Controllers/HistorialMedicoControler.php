@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CitaController;
+use App\Models\HistorialMedicoController;
 use Illuminate\Http\Request;
 
-class Cita extends Controller
+class HistorialMedicoControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class Cita extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(CitaController $citaController)
+    public function show(HistorialMedicoController $historialMedicoController)
     {
         //
     }
@@ -42,7 +42,7 @@ class Cita extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(CitaController $citaController)
+    public function edit(HistorialMedicoController $historialMedicoController)
     {
         //
     }
@@ -50,7 +50,7 @@ class Cita extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, CitaController $citaController)
+    public function update(Request $request, HistorialMedicoController $historialMedicoController)
     {
         //
     }
@@ -58,7 +58,7 @@ class Cita extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CitaController $citaController)
+    public function destroy(HistorialMedicoController $historialMedicoController)
     {
         //
     }

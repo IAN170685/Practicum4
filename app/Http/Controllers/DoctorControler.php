@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EstadisticasController;
+use App\Models\DoctorController;
 use Illuminate\Http\Request;
 
-class Estadisticas extends Controller
+class DoctorControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class Estadisticas extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(EstadisticasController $estadisticasController)
+    public function show(DoctorControler $doctorControler)
     {
         //
     }
@@ -42,7 +42,7 @@ class Estadisticas extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(EstadisticasController $estadisticasController)
+    public function edit(DoctorControler $doctorControler)
     {
         //
     }
@@ -50,7 +50,7 @@ class Estadisticas extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, EstadisticasController $estadisticasController)
+    public function update(Request $request, DoctorControler $doctorControler)
     {
         //
     }
@@ -58,7 +58,7 @@ class Estadisticas extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(EstadisticasController $estadisticasController)
+    public function destroy(DoctorControler $doctorControler)
     {
         //
     }

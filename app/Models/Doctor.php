@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NotificacionController extends Model
+class Doctor extends Model
 {
     //
 }

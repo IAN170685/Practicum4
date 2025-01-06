@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AltaGerenciaController;
+use App\Models\NotificacionController;
 use Illuminate\Http\Request;
 
-class AltaGerencia extends Controller
+class NotificacionControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class AltaGerencia extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AltaGerenciaController $altaGerenciaController)
+    public function show(NotificacionController $notificacionController)
     {
         //
     }
@@ -42,7 +42,7 @@ class AltaGerencia extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AltaGerenciaController $altaGerenciaController)
+    public function edit(NotificacionController $notificacionController)
     {
         //
     }
@@ -50,7 +50,7 @@ class AltaGerencia extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AltaGerenciaController $altaGerenciaController)
+    public function update(Request $request, NotificacionController $notificacionController)
     {
         //
     }
@@ -58,7 +58,7 @@ class AltaGerencia extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AltaGerenciaController $altaGerenciaController)
+    public function destroy(NotificacionController $notificacionController)
     {
         //
     }

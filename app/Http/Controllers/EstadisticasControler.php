@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\NotificacionController;
+use App\Models\EstadisticasController;
 use Illuminate\Http\Request;
 
-class Notificacion extends Controller
+class EstadisticasControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class Notificacion extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(NotificacionController $notificacionController)
+    public function show(EstadisticasController $estadisticasController)
     {
         //
     }
@@ -42,7 +42,7 @@ class Notificacion extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(NotificacionController $notificacionController)
+    public function edit(EstadisticasController $estadisticasController)
     {
         //
     }
@@ -50,7 +50,7 @@ class Notificacion extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, NotificacionController $notificacionController)
+    public function update(Request $request, EstadisticasController $estadisticasController)
     {
         //
     }
@@ -58,7 +58,7 @@ class Notificacion extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(NotificacionController $notificacionController)
+    public function destroy(EstadisticasController $estadisticasController)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PersonalAdministrativoController;
+use App\Models\UsuarioController;
 use Illuminate\Http\Request;
 
-class PersonalAdministrativo extends Controller
+class UsuarioControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class PersonalAdministrativo extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PersonalAdministrativoController $personalAdministrativoController)
+    public function show(UsuarioController $usuarioController)
     {
         //
     }
@@ -42,7 +42,7 @@ class PersonalAdministrativo extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PersonalAdministrativoController $personalAdministrativoController)
+    public function edit(UsuarioController $usuarioController)
     {
         //
     }
@@ -50,7 +50,7 @@ class PersonalAdministrativo extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PersonalAdministrativoController $personalAdministrativoController)
+    public function update(Request $request, UsuarioController $usuarioController)
     {
         //
     }
@@ -58,7 +58,7 @@ class PersonalAdministrativo extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PersonalAdministrativoController $personalAdministrativoController)
+    public function destroy(UsuarioController $usuarioController)
     {
         //
     }

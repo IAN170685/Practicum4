@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PacienteController;
+use App\Models\AltaGerenciaController;
 use Illuminate\Http\Request;
 
-class Paciente extends Controller
+class AltaGerenciaControler extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class Paciente extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PacienteController $pacienteController)
+    public function show(AltaGerenciaController $altaGerenciaController)
     {
         //
     }
@@ -42,7 +42,7 @@ class Paciente extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PacienteController $pacienteController)
+    public function edit(AltaGerenciaController $altaGerenciaController)
     {
         //
     }
@@ -50,7 +50,7 @@ class Paciente extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PacienteController $pacienteController)
+    public function update(Request $request, AltaGerenciaController $altaGerenciaController)
     {
         //
     }
@@ -58,7 +58,7 @@ class Paciente extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PacienteController $pacienteController)
+    public function destroy(AltaGerenciaController $altaGerenciaController)
     {
         //
     }
