@@ -1,62 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Inicio de Sesión</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Registro de Usuario</h1>
+<div class="container mt-5">
+    <h1 class="mb-4">Inicio de Sesión</h1>
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+    <form class="row g-3" method="POST" action="{{ route('login') }}">
+        @csrf
 
-        <form method="POST" action="{{ route('register') }}" class="mt-4">
-            @csrf
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" required>
+        </div>
 
-            <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
 
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+        </div>
 
-            <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
+        <div class="form-group mt-3 text-center">
+            <p>¿No tienes una cuenta? <a href="{{ route('register') }}">Regístrate aquí</a></p>
+        </div>
+    </form>
+</div>
 
-            <div class="form-group">
-                <label for="password_confirmation">Confirmar Contraseña</label>
-                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
-            </div>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-            <div class="form-group">
-                <label for="role">Rol</label>
-                <select class="form-control" id="role" name="role" required>
-                    <option value="paciente">Paciente</option>
-                    <option value="medico">Médico</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Registrar</button>
-        </form>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

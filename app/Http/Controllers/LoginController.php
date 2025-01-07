@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controllers
+class LoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('auth.login');
+        return view('registro');
     }
 
     public function login(Request $request)
@@ -20,18 +20,30 @@ class LoginController extends Controllers
             'password' => 'required',
         ]);
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->intended('dashboard'); // Redirige a la página deseada
+        if (Auth::attempt($request->only('email', 'password'))) {
+            $request->session()->regenerate();
+
+            $user = Auth::user();
+            if ($user->rol === 'medico') {
+                return redirect()->intended('/medico/index');
+            } elseif ($user->rol === 'paciente') {
+                return redirect()->intended('/paciente/index');
+            } else {
+                return redirect()->intended('/login');
+            }
         }
 
         return back()->withErrors([
-            'email' => 'Las credenciales proporcionadas son incorrectas.',
+            'email' => 'Las credenciales no coinciden con nuestros registros.',
         ]);
     }
 
     public function logout(Request $request)
     {
         Auth::logout();
-        return redirect('/login');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

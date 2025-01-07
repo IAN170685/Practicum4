@@ -29,7 +29,7 @@ class RegistroController extends Controller
         auth()->login($user);
 
         // Redirigir a la página de inicio o dashboard
-        return redirect()->route('usuario.dashboard'); // Cambia según sea necesario
+        return redirect()->route('Paciente.index'); // Cambia según sea necesario
     }
 
     // Validar los datos del formulario

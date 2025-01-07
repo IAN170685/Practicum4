@@ -1,0 +1,27 @@
+@extends('layout.layout')
+
+@section('title', 'Historial Médico')
+
+@section('content')
+<div class="container mt-5">
+    <h1 class="mb-4">Historial Médico de {{ $paciente->nombre }}</h1>
+
+    @if($historialMedico->isEmpty())
+        <p>No hay registros de historial médico para este paciente.</p>
+    @else
+        <div class="list-group">
+            @foreach($historialMedico as $registro)
+                <div class="list-group-item">
+                    <h5 class="mb-1">Fecha: {{ $registro->fecha }}</h5>
+                    <p class="mb-1"><strong>Diagnóstico:</strong> {{ $registro->diagnostico }}</p>
+                    <p class="mb-1"><strong>Tratamiento:</strong> {{ $registro->tratamiento }}</p>
+                    <p class="mb-1"><strong>Notas:</strong> {{ $registro->notas }}</p>
+                    <p class="mb-1"><strong>Médico:</strong> {{ $registro->medico->nombre }}</p>
+                </div>
+            @endforeach
+        </div>
+    @endif
+
+    <a href="{{ route('pacientes.index') }}" class="btn btn-primary mt-4">Volver a la lista de pacientes</a>
+</div>
+@endsection

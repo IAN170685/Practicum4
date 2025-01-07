@@ -34,9 +34,12 @@ class HistorialMedicoControler extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(HistorialMedicoController $historialMedicoController)
+    public function show($paciente_id)
     {
-        //
+        $paciente = Paciente::findOrFail($paciente_id);
+        $historialMedico = HistorialMedico::where('paciente_id', $paciente_id)->get();
+
+        return view('historial_medico.show', compact('paciente', 'historialMedico'));
     }
 
     /**

@@ -12,3 +12,4 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [RegistroController::class, 'showRegistrationForm'])->name('registro');
 Route::post('/register', [RegistroController::class, 'register']);
+Route::resource('pacientes', PacienteController::class);
